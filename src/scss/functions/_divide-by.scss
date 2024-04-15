@@ -1,0 +1,12 @@
+@use 'sass:math';
+
+/**
+ * Divide a value/variable by a divisor, default is 2
+ *
+ * Example:
+ * divide-by($element-padding) equivalent to $element-padding / 2
+ * divide-by($element-padding, 4) equivalent to $element-padding / 4
+ */
+@function divide-by($value, $divisor: 2) {
+  @return math.div($value, $divisor);
+}

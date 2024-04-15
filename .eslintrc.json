@@ -1,0 +1,22 @@
+{
+    "extends": [
+        "plugin:vue/essential",
+        "prettier"
+    ],
+    "env": {
+        "browser": true,
+        "commonjs": true,
+        "es6": true,
+        "node": true,
+        "jest": true
+    },
+    "overrides": [
+        {
+            "files": ["*.vue"],
+            "rules": {
+                "color-hex-case" : "off",
+                "max-len": ["error", { "code": 120 }]
+            }
+        }
+    ]
+}

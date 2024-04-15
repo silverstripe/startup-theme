@@ -1,0 +1,10 @@
+.sr-only {
+  @include sr-only();
+}
+
+.visually-hidden {
+  @include sr-only();
+
+  // stylelint-disable-next-line declaration-no-important
+  visibility: hidden !important;
+}

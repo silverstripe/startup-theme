@@ -1,0 +1,27 @@
+/* stylelint-disable no-duplicate-selectors */
+@use "sass:color";
+
+$root-path: "/_resources/themes/startup/dist";
+$font-path: "#{$root-path}/fonts" !default;
+$image-path: "#{$root-path}/images" !default;
+$icon-path: "#{$image-path}/icons" !default;
+
+/* Breakpoints */
+
+/* stylelint-disable unit-blacklist */
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+);
+/* stylelint-enable unit-blacklist */
+
+/* Underlines */
+
+$underline-height: 0.16rem;
+
+:root {
+  --underline-height: #{$underline-height};
+}

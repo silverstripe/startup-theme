@@ -1,0 +1,17 @@
+.container {
+  margin: 0 auto;
+  max-width: 76rem;
+  padding: 0 2rem;
+
+  @include media-breakpoint-up(lg) {
+    max-width: 98rem;
+  }
+
+  @include media-breakpoint-up(xl) {
+    max-width: 118rem;
+  }
+
+  @include media-breakpoint-up(xxl) {
+    max-width: 140rem;
+  }
+}
