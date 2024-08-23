@@ -1,0 +1,29 @@
+{
+  "name": "silverstripe-themes/startup",
+  "description": "Silverstripe Startup theme",
+  "type": "silverstripe-theme",
+  "keywords": [
+    "silverstripe",
+    "theme"
+  ],
+  "license": "BSD-3-Clause",
+  "authors": [
+    {
+      "name": "Adrian Jimson",
+      "email": "adrian.jimson@silverstripe.com"
+    },
+    {
+      "name": "Jared Dreyer",
+      "email": "jared.dreyer@silverstripe.com"
+    }
+  ],
+  "require": {
+    "silverstripe/recipe-cms": ">=5.2"
+  },
+  "extra": {
+    "expose": [
+      "css",
+      "images"
+    ]
+  }
+}
