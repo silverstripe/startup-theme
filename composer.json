@@ -23,7 +23,8 @@
   "extra": {
     "expose": [
       "css",
-      "images"
+      "images",
+      "favicons"
     ]
   }
 }
