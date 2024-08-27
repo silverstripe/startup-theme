@@ -1,0 +1,124 @@
+/* Header */
+header {
+    display: flex;
+    height: 38px;
+    padding: 18px 25px;
+    background-color: #222222;
+    color: white;
+}
+
+@media (min-width: 750px) {
+    header {
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+}
+
+@media (min-width: 992px) {
+    header {
+        padding-left: 135px;
+        padding-right: 135px;
+    }
+}
+
+/* Logo */
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+/* Menu */
+.menu {
+    display: none; /* To be replaced with mobile styles */
+}
+
+@media (min-width: 992px) {
+    .menu {
+        display: inline-block;
+    }
+    
+    .menu ul {
+        margin: 0;
+        font-size: 0;
+    }
+    
+    .menu .menu__item {
+        display: inline-block;
+        margin-left: 28px;
+        padding: 10px;
+        font-size: 16px;
+    }
+    
+    .menu .menu__item a {
+        color: white;
+        text-decoration: none;
+    }
+    
+    .menu__item--has-subnav::after {
+        content: url('../images/chevron--down--white.svg');
+        height: 11px;
+        width: 11px;
+        display: inline-block;
+    }
+}
+
+/* CTA button */
+.header__button--cta {
+    display: none;
+}
+
+@media (min-width: 992px) {
+    .header__button--cta {
+        display: block;
+        border-radius: 4px;
+        border: 2px white solid;
+        padding: 8px 18px;
+        background-color: transparent;
+        color: white;
+        margin: auto 0 auto auto;
+        line-height: 22px;
+    }    
+}
+
+.header__button--cta::after {
+    content: url('../images/arrow--external-link.svg');
+    height: 11px;
+    width: 11px;
+}
+
+/* Mobile menu button */
+.header__button--menu {
+    margin: auto -10px auto auto;
+    border: 0;
+    padding: 10px;
+    background: transparent;
+}
+
+@media (min-width: 992px) {
+    .header__button--menu {
+        display: none;
+    }
+}
+
+@media (min-width: 992px) {
+    .header__button--menu {
+        display: none;
+    }
+}
+
+.hamburger {
+    display: grid;
+    gap: 6px;
+    width: 24px;
+    margin: auto;
+}
+
+.hamburger__inner {
+    background-color: white;
+    height: 2px;
+}
+
+/* General */
+button {
+    cursor: pointer;
+}

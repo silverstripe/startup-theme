@@ -12,7 +12,7 @@
     <title><% if $MetaTitle %>$MetaTitle<% else %>$Title<% end_if %> | $SiteConfig.Title</title>
 </head>
 <body>
-    <%-- Header goes here --%>
+    <% include Header %>
     <div>Page template forthcoming</div>
     <%-- Footer goes here --%>
 </body>
