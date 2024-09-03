@@ -51,30 +51,6 @@ header {
     }
 }
 
-/* CTA button */
-.header__button--cta {
-    display: none;
-}
-
-@media (min-width: 992px) {
-    .header__button--cta {
-        display: block;
-        border-radius: .4rem;
-        border: .2rem white solid;
-        padding: .8rem 1.8rem;
-        background-color: transparent;
-        color: white;
-        margin: auto 0 auto auto;
-        line-height: 2.2rem;
-    }    
-}
-
-.header__button--cta::after {
-    content: url('../images/arrow--external-link.svg');
-    height: 1.1rem;
-    width: 1.1rem;
-}
-
 /* Mobile menu button */
 .header__button--menu {
     margin: auto -1rem auto auto;

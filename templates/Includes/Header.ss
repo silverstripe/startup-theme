@@ -18,10 +18,6 @@
             </ul>
         </nav>
 
-        <button class="header__button header__button--cta" href="#">
-            Dev docs
-        </button>
-
         <button class="header__button header__button--menu"
             type="button"
             aria-label="Open menu">
