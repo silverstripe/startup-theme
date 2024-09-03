@@ -1,7 +1,7 @@
 /* Layout styles */
 /* The container class enforces max-width and should wrap page elements */
 .container {
-    max-width: 117rem;
+    max-width: 123rem;
     margin: 0 auto;
     padding: 0 2rem;
 }
@@ -9,11 +9,5 @@
 @media (min-width: 750px)  {
     .container {
         padding: 0 3rem;
-    }
-}
-
-@media (min-width: 992px) {
-    .container {
-        padding: 0 13.5rem;
     }
 }

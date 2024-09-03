@@ -3,7 +3,6 @@
         <a href="$BaseHref" class="logo">
             <img src="$resourceURL('themes/startup/images/logo--white.svg')" alt="{$SiteConfig.Title}">
         </a>
-
         <nav>
             <ul class="menu">
                 <% loop $Menu(1) %>
@@ -13,7 +12,6 @@
                 <% end_loop %>
             </ul>
         </nav>
-
         <button class="header__button header__button--menu"
             type="button"
             aria-label="Open menu">

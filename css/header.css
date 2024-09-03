@@ -1,12 +1,19 @@
 /* Header */
 header {
     padding: 1.8rem 0;
-    background-color: #222222;
-    color: white;
+    background-color: var(--color-charcoal);
+    color: var(--color-white);
 }
 
 .header__container {
     display: flex;
+    justify-content: space-between;
+}
+
+@media (min-width: 992px) {
+    .header__container {
+        justify-content: left;
+    }
 }
 
 /* Logo */
@@ -25,18 +32,15 @@ header {
     .menu {
         display: flex;
         flex-wrap: wrap;
-        margin: 0;
-        font-size: 0;
     }
     
     .menu .menu__item {
         margin-left: 2.8rem;
         padding: 1rem;
-        font-size: var(--font-size-base);
     }
     
     .menu .menu__item a {
-        color: white;
+        color: var(--color-white);
         text-decoration: none;
     }
     
@@ -50,7 +54,7 @@ header {
 
 /* Mobile menu button */
 .header__button--menu {
-    margin: auto -1rem auto auto;
+    margin-right: -1rem;
     border: 0;
     padding: 1rem;
     background: transparent;
@@ -60,9 +64,6 @@ header {
     .header__button--menu {
         display: none;
     }
-}
-
-@media (min-width: 992px) {
     .header__button--menu {
         display: none;
     }
@@ -76,11 +77,6 @@ header {
 }
 
 .hamburger__inner {
-    background-color: white;
+    background-color: var(--color-white);
     height: .2rem;
-}
-
-/* General */
-button {
-    cursor: pointer;
 }
