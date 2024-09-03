@@ -7,12 +7,12 @@ header {
 
 .header__container {
     display: flex;
-    height: 3.8rem;
 }
 
 /* Logo */
 .logo {
     display: flex;
+    flex-shrink: 0;
     align-items: center;
 }
 
@@ -23,19 +23,16 @@ header {
 
 @media (min-width: 992px) {
     .menu {
-        display: inline-block;
-    }
-    
-    .menu ul {
+        display: flex;
+        flex-wrap: wrap;
         margin: 0;
         font-size: 0;
     }
     
     .menu .menu__item {
-        display: inline-block;
         margin-left: 2.8rem;
         padding: 1rem;
-        font-size: 1.6rem;
+        font-size: var(--font-size-base);
     }
     
     .menu .menu__item a {

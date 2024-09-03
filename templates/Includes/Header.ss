@@ -4,17 +4,13 @@
             <img src="$resourceURL('themes/startup/images/logo--white.svg')" alt="{$SiteConfig.Title}">
         </a>
 
-        <nav class="menu">
-            <ul>
-                <li class="menu__item menu__item--has-subnav">
-                    <a href="#">About</a>
-                </li>
-                <li class="menu__item">
-                    <a href="#">Resources</a>
-                </li>
-                <li class="menu__item">
-                    <a href="#">Contact</a>
-                </li>
+        <nav>
+            <ul class="menu">
+                <% loop $Menu(1) %>
+                    <li class="menu__item<% if $Children %> menu__item--has-subnav<% end_if %>">
+                        <a href="$Link">$MenuTitle</a>
+                    </li>
+                <% end_loop %>
             </ul>
         </nav>
 
