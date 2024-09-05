@@ -1,0 +1,4 @@
+/* Set transition variables */
+:root {
+    --transition-default: all .3s ease;
+}

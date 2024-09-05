@@ -6,8 +6,17 @@
         <nav>
             <ul class="menu">
                 <% loop $Menu(1) %>
-                    <li class="menu__item<% if $Children %> menu__item--has-subnav<% end_if %>">
+                    <li class="menu__item<% if $Children %> menu__item--has-submenu<% end_if %>">
                         <a href="$Link">$MenuTitle</a>
+                        <% if $Children %>
+                            <ul class="submenu">
+                                <% loop $Children %>
+                                    <li class="submenu__item">
+                                        <a href="$Link" title="$Title">$MenuTitle</a>
+                                    </li>
+                                <% end_loop %>
+                            </ul>
+                        <% end_if %>
                     </li>
                 <% end_loop %>
             </ul>

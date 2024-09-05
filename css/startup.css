@@ -5,5 +5,7 @@
 @import 'typography.css';
 @import 'wysiwyg.css';
 @import 'container.css';
+@import 'layout.css';
+@import 'transitions.css';
 @import 'header.css';
 @import 'page.css';
