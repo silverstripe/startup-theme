@@ -1,0 +1,42 @@
+/* Container styles */
+/* The container class enforces max-width and should wrap all inline display elements */
+.container {
+    max-width: 123rem;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+@media (min-width: 750px)  {
+    .container {
+        padding: 0 3rem;
+    }
+}
+
+.container--header {
+    display: flex;
+    justify-content: space-between;
+}
+
+@media (min-width: 992px) {
+    .container--header {
+        justify-content: left;
+    }
+}
+
+.container--page {
+    margin: 4.4rem auto;
+    display: flex;
+    flex-direction: column;
+}
+
+@media (min-width: 750px)  {
+    .container--page {
+        margin: 5.8rem auto;
+    }
+}
+
+@media (min-width: 992px) {
+    .container--page {
+        margin: 7rem auto;
+    }
+}

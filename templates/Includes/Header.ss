@@ -1,5 +1,5 @@
 <header>
-    <div class="container header__container">
+    <div class="container container--header">
         <a href="$BaseHref" class="logo">
             <img src="$resourceURL('themes/startup/images/logo--white.svg')" alt="{$SiteConfig.Title}">
         </a>

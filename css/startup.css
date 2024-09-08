@@ -4,5 +4,6 @@
 @import 'colors.css';
 @import 'typography.css';
 @import 'wysiwyg.css';
-@import 'layout.css';
+@import 'container.css';
 @import 'header.css';
+@import 'page.css';
