@@ -1,17 +1,16 @@
-.page {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-}
-
 @media (min-width: 992px)  {
     .page {
-        flex-direction: row;
+        display: flex;
+        justify-content: space-between;
     }
 }
 
 .breadcrumbs {
     margin-bottom: 1.3rem;
+
+    ol {
+        display: flex;
+    }
 }
 
 .breadcrumb {
@@ -25,8 +24,7 @@
 }
 
 .page__content {
-    display: flex;
-    flex-direction: column;
+    display: grid;
     gap: 2rem;
     width: 100%;
 }
@@ -59,16 +57,15 @@
     border-bottom: 0.1rem solid var(--color-line-grey);
 }
 
-.page-menu__nav > ul {
-    display: flex;
-    flex-direction: column;
+.page-menu__list {
+    display: grid;
     gap: 1.7rem;
 }
 
-.page-menu__nav-item {
+.page-menu__list-item {
     font-size: 1.4rem;
 }
 
-.page-menu__nav-item--current {
+.page-menu__list-item--current {
     font-weight: var(--font-weight-bold);
 }

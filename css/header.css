@@ -23,12 +23,12 @@ header {
         flex-wrap: wrap;
     }
 
-    .menu .menu__item {
+    .menu__item {
         margin-left: 2.8rem;
         padding: 1rem;
     }
 
-    .menu .menu__item a {
+    .menu__item a {
         color: var(--color-white);
         text-decoration: none;
     }
