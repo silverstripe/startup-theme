@@ -33,6 +33,7 @@ header {
         color: var(--color-white);
         text-decoration: none;
         padding: 1rem;
+        text-decoration: none;
         transition: var(--transition-default);
     }
 
@@ -40,6 +41,10 @@ header {
     .menu__item:focus-within > a,
     .menu__item:has(.submenu:hover) > a {
         opacity: 0.7;
+    }
+
+    .menu__item--has-submenu > a {
+        margin-right: -0.5rem; /* to account for chevron padding */
     }
 
     /* add chevron if item has child menu */
@@ -62,16 +67,16 @@ header {
         position: absolute;
         background: var(--color-white);
         min-width: 19rem;
-        border: 2px var(--color-charcoal) solid;
-        border-radius: 4px;
+        border: 0.2rem var(--color-charcoal) solid;
+        border-radius: 0.4rem;
         padding: 1rem;
         visibility: hidden;
         opacity: 0;
         transition: var(--transition-default);
     }
 
-    .submenu__item a {
-        display: inline-block;
+    .submenu__item > a {
+        display: block;
         padding: 0.5rem;
         color: initial;
         transition: var(--transition-default);
