@@ -7,18 +7,18 @@
 
 .breadcrumbs {
     margin-bottom: 1.3rem;
-
-    ol {
-        display: flex;
-    }
 }
 
-.breadcrumb {
+.breadcrumbs__list {
+    display: flex;
+}
+
+.breadcrumbs__list-item {
     font-weight: var(--font-weight-semibold);
     font-size: 1.4rem;
 }
 
-.breadcrumb__delimiter {
+.breadcrumbs__list-delimiter {
     color: var(--color-grey);
     padding: 0 0.8rem;
 }
