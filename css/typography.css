@@ -102,3 +102,11 @@ blockquote {
         font-size: 4rem;
     }
 }
+
+a {
+    text-decoration: underline;
+}
+
+a:hover {
+    text-decoration: none;
+}

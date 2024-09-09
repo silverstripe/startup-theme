@@ -13,7 +13,7 @@
 </head>
 <body>
     <% include Header %>
-    <div>Page template forthcoming</div>
+    $Layout
     <%-- Footer goes here --%>
 </body>
 </html>
