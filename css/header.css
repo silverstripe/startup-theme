@@ -79,6 +79,7 @@ header {
         display: block;
         padding: 0.5rem;
         color: initial;
+        text-decoration: none;
         transition: var(--transition-default);
     }
 
