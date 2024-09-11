@@ -1,5 +1,7 @@
 /* Color variables */
 :root {
+    --color-black: #000000;
+    --color-black-50: rgba(0, 0, 0, 0.5);
     --color-charcoal: #222222;
     --color-grey: #5F5F5F;
     --color-line-grey: #DADADA;

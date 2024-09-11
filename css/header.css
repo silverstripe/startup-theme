@@ -164,6 +164,17 @@ header {
     display: none;
 }
 
+/* Site overlay, under mobile menu */
+/* .modal__background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-color: var(--color-black-50);
+    transition: var(--transition-default);
+} */
+
 /* Mobile menu */
 .nav--mobile {
     position: absolute;
