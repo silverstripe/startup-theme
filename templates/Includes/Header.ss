@@ -24,14 +24,14 @@
             </ul>
         </nav>
 
-        <%-- Mobile menu background --%>
-        <div class="modal__background"></div>
-
         <%-- Mobile menu controls --%>
         <input class="mobile-menu__toggle" type="checkbox" id="mobile-menu__toggle">
         <label class="hamburger" for="mobile-menu__toggle" aria-label="Open menu">
             <span class="hamburger__lines"></span>
         </label>
+
+        <%-- Mobile menu background --%>
+        <div class="modal__background"></div>
 
         <%-- Mobile menu --%>
         <nav class="nav nav--mobile">
