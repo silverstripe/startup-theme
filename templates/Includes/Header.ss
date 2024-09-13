@@ -30,8 +30,8 @@
             <span class="hamburger__lines"></span>
         </label>
 
-        <%-- Mobile menu background --%>
-        <div class="modal__background"></div>
+        <%-- Mobile menu background - can be clicked to close menu --%>
+        <label class="modal__background" for="mobile-menu__toggle" aria-hidden="true"></label>
 
         <%-- Mobile menu --%>
         <nav class="nav nav--mobile">
@@ -43,13 +43,21 @@
                     <li class="mobile-menu__item<% if $Children %> mobile-menu__item--has-submenu<% end_if %>">
                         <a href="$Link">$MenuTitle</a>
                         <% if $Children %>
-                            <ul class="mobile-submenu">
-                                <% loop $Children %>
-                                    <li class="mobile-submenu__item">
-                                        <a href="$Link" title="$Title">$MenuTitle</a>
-                                    </li>
-                                <% end_loop %>
-                            </ul>
+                            <input class="mobile-submenu__toggle" type="checkbox" id="{$URLSegment}-submenu__toggle">
+                            <label class="submenu-chevron" for="{$URLSegment}-submenu__toggle" aria-label="Open $MenuTitle submenu">
+                                <svg width="11" height="8" viewBox="0 0 11 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path opacity="0.7" d="M0 1.88973L1.29663 0.5L5.50183 5.08612L9.70337 0.5L11 1.88973L5.50183 7.86607L0 1.88973Z" fill="#2D2828"/>
+                                    </svg>
+                            </label>
+                            <div class="mobile-submenu-container">
+                                <ul class="mobile-submenu">
+                                    <% loop $Children %>
+                                        <li class="mobile-submenu__item">
+                                            <a href="$Link" title="$Title">$MenuTitle</a>
+                                        </li>
+                                    <% end_loop %>
+                                </ul>
+                            </div>
                         <% end_if %>
                     </li>
                 <% end_loop %>
