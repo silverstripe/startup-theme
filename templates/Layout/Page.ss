@@ -1,5 +1,5 @@
 <main class="container container--page">
-    <% if $PageLevel > 1 %>
+    <% if not $isHomePage %>
         $Breadcrumbs
     <% end_if %>
     <div class="page">
@@ -9,7 +9,7 @@
         </div>
         <% if $Menu($PageLevel).count > 1 && $PageLevel > 1 %>
             <aside class="page-menu">
-                <h2 class="h5 page-menu__heading">$Title</h2>
+                <a href="$Parent.Link" class="h5 page-menu__heading">$Parent.Title</a>
                 <nav class="page-menu__nav">
                     <ul class="page-menu__list">
                     <% loop $Menu($PageLevel) %>

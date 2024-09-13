@@ -105,8 +105,14 @@ blockquote {
 
 a {
     text-decoration: underline;
+    text-underline-offset: 0.4rem;
 }
 
 a:hover {
-    text-decoration: none;
+    text-decoration-thickness: 0.2rem;
+}
+
+a:focus-visible {
+    outline: var(--color-charcoal) dashed 0.1rem;
+    border-radius: 0.2rem;
 }

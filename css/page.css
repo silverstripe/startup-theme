@@ -14,7 +14,6 @@
 }
 
 .breadcrumbs__list-item {
-    font-weight: var(--font-weight-semibold);
     font-size: 1.4rem;
 }
 
@@ -48,6 +47,8 @@
 }
 
 .page-menu__heading {
+    display: block;
+    text-decoration: none;
     margin-bottom: 1.5rem;
 }
 

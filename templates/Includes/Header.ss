@@ -1,6 +1,6 @@
 <header>
     <div class="container container--header">
-        <a href="$BaseHref" class="logo">
+        <a href="$baseURL" class="logo">
             <img src="$resourceURL('themes/startup/images/logo--white.svg')" alt="{$SiteConfig.Title}">
         </a>
         <nav>
