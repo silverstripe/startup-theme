@@ -161,13 +161,13 @@ header {
 .mobile-menu__toggle:checked ~ .hamburger .hamburger__lines::before {
     transform: rotate(-45deg);
     background: var(--color-charcoal);
-    top:0;
+    top: 0;
 }
 
 .mobile-menu__toggle:checked ~ .hamburger .hamburger__lines::after {
     transform: rotate(45deg);
     background: var(--color-charcoal);
-    top:0;
+    top: 0;
 }
 
 /* Mobile menu trigger */
