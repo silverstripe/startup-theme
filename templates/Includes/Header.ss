@@ -25,8 +25,8 @@
         </nav>
 
         <%-- Mobile menu controls --%>
-        <input class="mobile-menu__toggle" type="checkbox" id="mobile-menu__toggle">
-        <label class="hamburger" for="mobile-menu__toggle" aria-label="Open menu">
+        <input class="mobile-menu__toggle" type="checkbox" id="mobile-menu__toggle" role="Toggle menu">
+        <label class="hamburger" for="mobile-menu__toggle">
             <span class="hamburger__lines"></span>
         </label>
 
