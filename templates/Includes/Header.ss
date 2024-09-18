@@ -1,20 +1,20 @@
-<header>
+<header class="header">
     <div class="container container--header">
         <a href="$BaseHref" class="logo">
             <img src="$resourceURL('themes/startup/images/logo--white.svg')" alt="{$SiteConfig.Title}">
         </a>
 
         <%-- Desktop menu --%>
-        <nav>
+        <nav class="nav nav--desktop">
             <ul class="menu">
                 <% loop $Menu(1) %>
                     <li class="menu__item<% if $Children %> menu__item--has-submenu<% end_if %>">
-                        <a href="$Link">$MenuTitle</a>
+                        <a href="$Link" class="menu__link">$MenuTitle</a>
                         <% if $Children %>
                             <ul class="submenu">
                                 <% loop $Children %>
                                     <li class="submenu__item">
-                                        <a href="$Link" title="$Title">$MenuTitle</a>
+                                        <a href="$Link" class="submenu__link">$MenuTitle</a>
                                     </li>
                                 <% end_loop %>
                             </ul>
@@ -35,13 +35,14 @@
 
         <%-- Mobile menu --%>
         <nav class="nav nav--mobile">
-            <a href="$BaseHref" class="logo">
-                <img src="$resourceURL('themes/startup/images/logo--black.svg')" alt="{$SiteConfig.Title}">
+            <a href="$BaseHref" class="logo logo--mobile">
+                <img class="logo__image" src="$resourceURL('themes/startup/images/logo--black.svg')" alt="{$SiteConfig.Title}">
             </a>
             <ul class="mobile-menu">
                 <% loop $Menu(1) %>
                     <li class="mobile-menu__item<% if $Children %> mobile-menu__item--has-submenu<% end_if %>">
-                        <a href="$Link">$MenuTitle</a>
+                        <a href="$Link" class="mobile-menu__link"
+                        >$MenuTitle</a>
                         <% if $Children %>
                             <input class="mobile-submenu__toggle" type="checkbox" id="{$URLSegment}-submenu__toggle">
                             <label class="submenu-chevron" for="{$URLSegment}-submenu__toggle" aria-label="Open $MenuTitle submenu">
@@ -53,7 +54,7 @@
                                 <ul class="mobile-submenu">
                                     <% loop $Children %>
                                         <li class="mobile-submenu__item">
-                                            <a href="$Link" title="$Title">$MenuTitle</a>
+                                            <a href="$Link" title="$Title" class="mobile-submenu__link">$MenuTitle</a>
                                         </li>
                                     <% end_loop %>
                                 </ul>
