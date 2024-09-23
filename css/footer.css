@@ -6,11 +6,6 @@
     text-align: center;
 }
 
-/* Copyright */
-.footer-menu__item.copyright {
-    margin-bottom: 3rem;
-}
-
 /* Menu */
 .nav--footer {
     width: 100%;
@@ -19,6 +14,10 @@
 
 .footer-menu__item {
     margin-bottom: 2rem;
+}
+
+.footer-menu__item.copyright {
+    margin-bottom: 3rem;
 }
 
 /* Logo */
@@ -30,19 +29,20 @@
 }
 
 @media (min-width: 750px)  {
-    .footer-menu__item.copyright {
-        margin: 0 3rem 0;
-        text-wrap: nowrap;
-    }
-
     .footer-menu {
         display: flex;
         justify-content: center;
     }
-    
+
     .footer-menu__item {
         margin-right: 2rem;
         margin-bottom: 0;
+    }
+
+    .footer-menu__item.copyright {
+        margin-right: 3rem;
+        margin-bottom: 0;
+        text-wrap: nowrap;
     }
 }
 
@@ -53,6 +53,7 @@
 
     .nav--footer {
         width: auto;
+        margin-bottom: 0;
     }
 
     .footer__logo {
