@@ -25,31 +25,29 @@
         </nav>
 
         <%-- Mobile menu controls --%>
-        <input class="mobile-menu__toggle" type="checkbox" id="mobile-menu__toggle" role="Toggle menu">
-        <label class="hamburger" for="mobile-menu__toggle">
+        <button class="hamburger" type="button" aria-label="Toggle menu" data-toggle-mobile-menu>
             <span class="hamburger__lines"></span>
-        </label>
+        </button>
 
         <%-- Mobile menu background - can be clicked to close menu --%>
-        <label class="modal__background" for="mobile-menu__toggle" aria-hidden="true"></label>
+        <div class="modal__background" data-toggle-mobile-menu></div>
 
         <%-- Mobile menu --%>
         <nav class="nav nav--mobile">
             <a href="$BaseHref" class="logo logo--mobile">
                 <img class="logo__image" src="$resourceURL('themes/startup/images/logo--black.svg')" alt="{$SiteConfig.Title}">
             </a>
-            <ul class="mobile-menu">
+            <ul class="mobile-menu" data-accordion>
                 <% loop $Menu(1) %>
-                    <li class="mobile-menu__item<% if $Children %> mobile-menu__item--has-submenu<% end_if %>">
+                    <li class="mobile-menu__item<% if $Children %> mobile-menu__item--has-submenu<% end_if %>" <% if $Children %>data-accordion-item<% end_if %>>
                         <a href="$Link" class="mobile-menu__link"
                         >$MenuTitle</a>
                         <% if $Children %>
-                            <input class="mobile-submenu__toggle" type="checkbox" id="{$URLSegment}-submenu__toggle">
-                            <label class="submenu-chevron" for="{$URLSegment}-submenu__toggle" aria-label="Open $MenuTitle submenu">
+                            <button class="submenu-chevron" type="button" aria-label="Open $MenuTitle submenu" aria-expanded="false" data-accordion-link>
                                 <svg width="11" height="8" viewBox="0 0 11 8" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <path d="M0 1.88973L1.29663 0.5L5.50183 5.08612L9.70337 0.5L11 1.88973L5.50183 7.86607L0 1.88973Z" fill="#2D282870"/>
-                                    </svg>
-                            </label>
+                                </svg>
+                            </button>
                             <div class="mobile-submenu-container">
                                 <ul class="mobile-submenu">
                                     <% loop $Children %>
