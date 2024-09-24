@@ -14,7 +14,7 @@
 <body>
     <% include Header %>
     $Layout
-    <%-- Footer goes here --%>
+    <% include Footer %>
     <script type="module" src="{$resourceURL('themes/startup/js/startup.js')}" defer></script>
 </body>
 </html>
