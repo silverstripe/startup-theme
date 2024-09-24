@@ -1,5 +1,7 @@
 /* Header */
-header {
+.header {
+    display: flex;
+    min-height: 7.2rem;
     padding: 1.8rem 0;
     background-color: var(--color-charcoal);
     color: var(--color-white);
@@ -7,17 +9,25 @@ header {
 
 /* Logo */
 .logo {
-    display: flex;
-    flex-shrink: 0;
-    align-items: center;
+    display: inline-flex;
 }
 
 /* Menu */
 .menu {
-    display: none; /* To be replaced with mobile styles */
+    display: none;
 }
 
 @media (min-width: 992px) {
+    .header {
+        min-height: 9rem;
+    }
+
+    .nav--desktop {
+        display: flex;
+        flex-wrap: wrap;
+        align-content: center;
+    }
+
     .menu {
         display: flex;
         flex-wrap: wrap;
@@ -36,18 +46,18 @@ header {
         transition: var(--transition-default);
     }
 
-    .menu__item:hover > a,
-    .menu__item:focus-within > a,
-    .menu__item:has(.submenu:hover) > a {
+    .menu__item:hover > .menu__link,
+    .menu__item:focus-within > .menu__link,
+    .menu__item:has(.submenu:hover) > .menu__link {
         opacity: 0.7;
     }
 
-    .menu__item--has-submenu > a {
+    .menu__item--has-submenu > .menu__link {
         margin-right: -0.5rem; /* to account for chevron padding */
     }
 
     /* add chevron if item has child menu */
-    .menu__item--has-submenu > a::after {
+    .menu__item--has-submenu > .menu__link::after {
         content: url('../images/chevron--down--white.svg');
         display: inline-block;
         padding: 0 0.5rem;
@@ -55,9 +65,9 @@ header {
     }
 
     /* chevron hover animation, also applied on submenu hover */
-    .menu__item--has-submenu:hover a::after,
-    .menu__item--has-submenu:focus-within a::after,
-    .menu__item--has-submenu:has(.submenu:hover) a::after {
+    .menu__item--has-submenu:hover .menu__link::after,
+    .menu__item--has-submenu:focus-within .menu__link::after,
+    .menu__item--has-submenu:has(.submenu:hover) .menu__link::after {
         transform: rotate(-180deg);
     }
 
@@ -74,7 +84,7 @@ header {
         transition: var(--transition-default);
     }
 
-    .submenu__item > a {
+    .submenu__link {
         display: block;
         padding: 0.5rem;
         line-height: 1.3;
@@ -83,8 +93,8 @@ header {
         transition: var(--transition-default);
     }
 
-    .submenu__item:hover > a,
-    .submenu__item:focus-within > a {
+    .submenu__item:hover > .submenu__link,
+    .submenu__item:focus-within > .submenu__link {
         opacity: 0.7;
     }
 
@@ -98,30 +108,167 @@ header {
 }
 
 /* Mobile menu button */
-.header__button--menu {
+.hamburger {
+    position: relative;
     margin-right: -1rem;
-    border: 0;
-    padding: 1rem;
-    background: transparent;
+    padding: 2rem 1rem;
+    z-index: 30;
+    cursor: pointer;
+    color: var(--color-white);
+}
+
+.mobile-menu-is-active .hamburger {
+    color: var(--color-black);
 }
 
 @media (min-width: 992px) {
-    .header__button--menu {
+    .hamburger {
         display: none;
     }
-    .header__button--menu {
+    .nav--mobile {
         display: none;
     }
 }
 
-.hamburger {
-    display: grid;
-    gap: .6rem;
-    width: 2.4rem;
-    margin: auto;
-}
-
-.hamburger__inner {
+.hamburger__lines {
+    position: relative;
     background-color: var(--color-white);
+    display: block;
     height: .2rem;
+    width: 2.4rem;
+}
+
+.hamburger__lines::before,
+.hamburger__lines::after {
+    background-color: var(--color-white);
+    content: '';
+    display: block;
+    height: 100%;
+    position: absolute;
+    transition: var(--transition-default);
+    width: 100%;
+}
+
+.hamburger__lines::before {
+    top: -0.8rem;
+}
+
+.hamburger__lines::after {
+    top: 0.8rem;
+}
+
+.mobile-menu-is-active .hamburger__lines {
+    background: transparent;
+}
+
+.mobile-menu-is-active .hamburger__lines::before {
+    transform: rotate(-45deg);
+    background: var(--color-charcoal);
+    top: 0;
+}
+
+.mobile-menu-is-active .hamburger__lines::after {
+    transform: rotate(45deg);
+    background: var(--color-charcoal);
+    top: 0;
+}
+
+/* Site overlay, under mobile menu */
+.modal__background {
+    content: '';
+    position: fixed;
+    inset: 0;
+    background-color: var(--color-black-0);
+    transition: var(--transition-default);
+    visibility: hidden;
+}
+
+.mobile-menu-is-active .modal__background {
+    visibility: visible;
+    background-color: var(--color-black-50);
+}
+
+/* Mobile menu */
+.nav--mobile {
+    position: absolute;
+    top: 0;
+    right: 0;
+    min-height: 100%;
+    width: 0;
+    padding-top: 2.7rem;
+    padding-bottom: 2.7rem;
+    visibility: hidden;
+    background-color: var(--color-white);
+    overflow-x: hidden;
+    transition: var(--transition-default);
+    white-space: nowrap;
+}
+
+.mobile-menu-is-active .nav--mobile {
+    width: calc(100% - 5.5rem);
+    padding-left: 2rem;
+    padding-right: 2rem;
+    visibility: visible;
+}
+
+/* Mobile menu logo */
+.logo--mobile {
+    height: 2.2rem;
+    margin-bottom: 2.7rem;
+    color: var(--color-black);
+}
+
+.logo__image {
+    height: 100%;
+    width: auto;
+}
+
+/* Mobile menu */
+.mobile-menu {
+    border-bottom: 0.1rem var(--color-line-grey) solid;
+    color: var(--color-charcoal);
+    z-index: 30;
+}
+
+.mobile-menu__item {
+    position: relative;
+    border-top: 0.1rem var(--color-line-grey) solid;
+    padding: 2rem 0;
+}
+
+.mobile-menu__link {
+    text-decoration: none;
+}
+
+/* Mobile submenu */
+.mobile-submenu-container {
+    display: grid;
+    grid-template-rows: 0fr;
+    transition: var(--transition-default);
+    visibility: hidden;
+}
+
+.mobile-menu__item.is-active .mobile-submenu-container {
+    grid-template-rows: 1fr;
+    visibility: visible;
+}
+
+.mobile-submenu {
+    margin: 1rem 0 -1rem;
+    overflow: hidden;
+}
+
+.mobile-submenu__link {
+    display: inline-block;
+    text-decoration: none;
+    margin: 1rem;
+}
+
+.submenu-chevron {
+    position: absolute;
+    right: 0;
+    top: 1rem;
+    padding: 1rem;
+    margin-right: -1rem;
+    cursor: pointer;
 }
