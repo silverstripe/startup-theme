@@ -1,0 +1,62 @@
+/* Button styles */
+.button {
+    border-radius: .4rem;
+    border: .2rem var(--color-charcoal) solid;
+    padding: .8rem 1.8rem;
+    background-color: var(--color-charcoal);
+    color: var(--color-white);
+    line-height: 1.38;
+    transition: var(--transition-default);
+}
+
+.button:hover,
+.button:focus-visible {
+    border-color: var(--color-bright-blue);
+    background-color: var(--color-bright-blue);
+}
+
+.button:focus-visible {
+    outline-color: var(--color-charcoal);
+}
+
+.button--secondary {
+    border-color: var(--color-charcoal);
+    background-color: var(--color-white);
+    color: var(--color-charcoal);
+}
+
+.button--secondary:hover,
+.button--secondary:focus-visible {
+    border-color: var(--color-charcoal);
+    background-color: var(--color-line-grey);
+}
+
+/* On dark background */
+.section--color-dark .button {
+    border-color: var(--color-white);
+    background-color: var(--color-white);
+    color: var(--color-charcoal);
+}
+
+.section--color-dark .button:hover,
+.section--color-dark .button:focus-visible  {
+    border-color: var(--color-line-grey);
+    background-color: var(--color-line-grey);
+}
+
+.section--color-dark .button:focus-visible {
+    outline-color: var(--color-white);
+}
+
+.section--color-dark .button--secondary {
+    border-color: var(--color-white);
+    background-color: transparent;
+    color: var(--color-white);
+}
+
+.section--color-dark .button--secondary:hover,
+.section--color-dark .button--secondary:focus-visible {
+    border-color: var(--color-white);
+    background-color: var(--color-white);
+    color: var(--color-charcoal);
+}

@@ -16,8 +16,9 @@
 }
 
 *:focus-visible {
-    outline: currentcolor solid 0.2rem;
+    outline: currentcolor dashed 0.2rem;
     outline-offset: 0.2rem;
+    border-radius: 0.2rem;
 }
 
 html,
