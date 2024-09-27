@@ -3,6 +3,16 @@
     padding: 6rem 0;
 }
 
+@media (min-width: 992px) {
+    .section {
+        padding: 10rem 0;
+    }
+}
+
+.section--color-white + .section--color-white {
+    padding-top: 0;
+}
+
 .section--color-dark {
     color: var(--color-white);
 }
