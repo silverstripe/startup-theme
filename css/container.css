@@ -14,9 +14,9 @@
 }
 
 .container--header {
+    align-items: center;
     display: flex;
     justify-content: space-between;
-    align-items: center;
 }
 
 .container--page {
@@ -34,5 +34,17 @@
 @media (min-width: 992px) {
     .container--page {
         margin: 7rem auto;
+    }
+}
+
+@media (min-width: 750px) {
+    .container--narrow {
+        max-width: 76.8rem;
+    }
+}
+
+@media (min-width: 992px) {
+    .container--narrow {
+        max-width: 83rem;
     }
 }

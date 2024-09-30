@@ -1,6 +1,8 @@
 /* This is the main CSS file we 'require' on our top level Page.ss template */
 @import 'fonts.css';
 @import 'base.css';
+@import 'breadcrumbs.css';
+@import 'button.css';
 @import 'colors.css';
 @import 'typography.css';
 @import 'wysiwyg.css';
@@ -9,6 +11,6 @@
 @import 'header.css';
 @import 'hero.css';
 @import 'page.css';
+@import 'block.css';
 @import 'section.css';
-@import 'button.css';
 @import 'footer.css';

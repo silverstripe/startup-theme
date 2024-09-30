@@ -5,7 +5,7 @@
         </a>
 
         <%-- Desktop menu --%>
-        <nav class="nav nav--desktop">
+        <nav class="nav nav--desktop" aria-label="Main">
             <ul class="menu">
                 <% loop $Menu(1) %>
                     <li class="menu__item<% if $Children %> menu__item--has-submenu<% end_if %>">
@@ -33,7 +33,7 @@
         <div class="modal__background" data-toggle-mobile-menu></div>
 
         <%-- Mobile menu --%>
-        <nav class="nav nav--mobile">
+        <nav class="nav nav--mobile" aria-label="Main">
             <a href="$BaseHref" class="logo logo--mobile">
                 <img class="logo__image" src="$resourceURL('themes/startup/images/logo--black.svg')" alt="{$SiteConfig.Title}">
             </a>

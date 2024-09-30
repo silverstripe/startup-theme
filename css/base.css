@@ -24,8 +24,11 @@
 html,
 body {
     scroll-behavior: smooth;
+}
 
-    @media (prefers-reduced-motion) {
+@media (prefers-reduced-motion) {
+    html,
+    body {
         scroll-behavior: unset;
     }
 }
@@ -34,10 +37,7 @@ a {
     color: inherit;
     cursor: pointer;
     text-decoration: none;
-    transition:
-        background-color 0.1s ease-in,
-        border-color 0.1s ease-in,
-        color 0.1s ease-in;
+    transition: var(--transition-color);
 }
 
 abbr[title] {
@@ -98,7 +98,7 @@ sup {
 }
 
 svg {
-    transition: fill 0.1s ease-in;
+    transition: var(--transition-svg);
 }
 
 table {
