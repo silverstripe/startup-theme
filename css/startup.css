@@ -2,6 +2,7 @@
 @import 'fonts.css';
 @import 'base.css';
 @import 'breadcrumbs.css';
+@import 'button.css';
 @import 'colors.css';
 @import 'typography.css';
 @import 'wysiwyg.css';
@@ -12,5 +13,4 @@
 @import 'page.css';
 @import 'block.css';
 @import 'section.css';
-@import 'button.css';
 @import 'footer.css';

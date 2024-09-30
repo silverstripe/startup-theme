@@ -4,8 +4,11 @@
     border: .2rem var(--color-charcoal) solid;
     border-radius: .4rem;
     color: var(--color-white);
+    display: inline-block;
     line-height: 1.38;
     padding: 1.4rem 2.5rem;
+    text-align: center;
+    text-decoration: none;
     transition: var(--transition-default);
     width: fit-content;
 }
@@ -30,6 +33,15 @@
 .button--secondary:focus-visible {
     background-color: var(--color-line-grey);
     border-color: var(--color-charcoal);
+}
+
+.button--external {
+    &::after {
+        content: url('../images/arrow--external-link.svg');
+        display: inline-block;
+        padding: 0 0.5rem;
+        transition: var(--transition-default);
+    }
 }
 
 /* On dark background */
@@ -61,3 +73,4 @@
     border-color: var(--color-white);
     color: var(--color-charcoal);
 }
+
