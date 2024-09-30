@@ -16,12 +16,7 @@
 .container--header {
     display: flex;
     justify-content: space-between;
-}
-
-@media (min-width: 992px) {
-    .container--header {
-        justify-content: left;
-    }
+    align-items: center;
 }
 
 .container--page {
