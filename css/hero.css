@@ -1,0 +1,9 @@
+.hero {
+    background-color: var(--color-pale-grey);
+    padding-bottom: 4rem;
+    padding-top: 6rem;
+}
+
+.hero .page__title {
+    margin: 0;
+}
