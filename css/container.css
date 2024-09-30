@@ -17,13 +17,6 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    position: relative;
-}
-
-@media (min-width: 992px) {
-    .container--header {
-        justify-content: left;
-    }
 }
 
 .container--page {
