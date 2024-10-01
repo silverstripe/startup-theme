@@ -1,76 +1,75 @@
 /* Button styles */
 .button {
     background-color: var(--color-charcoal);
-    border: .2rem var(--color-charcoal) solid;
-    border-radius: .4rem;
+    border: 0.2rem solid var(--color-charcoal);
+    border-radius: 0.4rem;
     color: var(--color-white);
-    display: inline-block;
+    display: inline-flex;
+    gap: 0.3rem;
+    justify-content: center;
     line-height: 1.38;
     padding: 1.4rem 2.5rem;
-    text-align: center;
     text-decoration: none;
-    transition: var(--transition-default);
+    transition: var(--transition-color);
     width: fit-content;
-}
 
-.button:hover,
-.button:focus-visible {
-    background-color: var(--color-bright-blue);
-    border-color: var(--color-bright-blue);
-}
+    &:hover,
+    &:focus-visible {
+        background-color: var(--color-bright-blue);
+        border-color: var(--color-bright-blue);
+    }
 
-.button:focus-visible {
-    outline-color: var(--color-charcoal);
+    &:focus-visible {
+        outline-color: var(--color-charcoal);
+    }
 }
 
 .button--secondary {
     background-color: var(--color-white);
     border-color: var(--color-charcoal);
     color: var(--color-charcoal);
-}
 
-.button--secondary:hover,
-.button--secondary:focus-visible {
-    background-color: var(--color-line-grey);
-    border-color: var(--color-charcoal);
+    &:hover,
+    &:focus-visible {
+        background-color: var(--color-line-grey);
+        border-color: var(--color-charcoal);
+    }
 }
 
 .button--external {
     &::after {
         content: url('../images/arrow--external-link.svg');
-        display: inline-block;
-        padding: 0 0.5rem;
-        transition: var(--transition-default);
     }
 }
 
 /* On dark background */
-.section--color-dark .button {
-    background-color: var(--color-white);
-    border-color: var(--color-white);
-    color: var(--color-charcoal);
-}
+.section--color-dark {
+    .button {
+        background-color: var(--color-white);
+        border-color: var(--color-white);
+        color: var(--color-charcoal);
 
-.section--color-dark .button:hover,
-.section--color-dark .button:focus-visible  {
-    background-color: var(--color-line-grey);
-    border-color: var(--color-line-grey);
-}
+        &:hover,
+        &:focus-visible  {
+            background-color: var(--color-line-grey);
+            border-color: var(--color-line-grey);
+        }
 
-.section--color-dark .button:focus-visible {
-    outline-color: var(--color-white);
-}
+        &:focus-visible {
+            outline-color: var(--color-white);
+        }
+    }
 
-.section--color-dark .button--secondary {
-    background-color: transparent;
-    border-color: var(--color-white);
-    color: var(--color-white);
-}
+    .button--secondary {
+        background-color: transparent;
+        border-color: var(--color-white);
+        color: var(--color-white);
 
-.section--color-dark .button--secondary:hover,
-.section--color-dark .button--secondary:focus-visible {
-    background-color: var(--color-white);
-    border-color: var(--color-white);
-    color: var(--color-charcoal);
+        &:hover,
+        &:focus-visible {
+            background-color: var(--color-white);
+            border-color: var(--color-white);
+            color: var(--color-charcoal);
+        }
+    }
 }
-

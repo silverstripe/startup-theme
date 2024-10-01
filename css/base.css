@@ -13,22 +13,19 @@
 * {
     padding: 0;
     margin: 0;
-}
 
-*:focus-visible {
-    outline: currentcolor dashed 0.2rem;
-    outline-offset: 0.2rem;
-    border-radius: 0.2rem;
+    &:focus-visible {
+        outline: currentcolor dashed 0.2rem;
+        outline-offset: 0.2rem;
+        border-radius: 0.2rem;
+    }
 }
 
 html,
 body {
     scroll-behavior: smooth;
-}
 
-@media (prefers-reduced-motion) {
-    html,
-    body {
+    @media (prefers-reduced-motion) {
         scroll-behavior: unset;
     }
 }
