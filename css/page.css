@@ -1,8 +1,9 @@
 /**
  * Page styles
  */
-@media (min-width: 992px)  {
-    .page {
+
+.page {
+    @media (min-width: 992px)  {
         display: flex;
         justify-content: space-between;
     }
@@ -12,10 +13,8 @@
     display: grid;
     gap: 2rem;
     width: 100%;
-}
 
-@media (min-width: 992px)  {
-    .page__content {
+    @media (min-width: 992px) {
         width: 76rem;
     }
 }
@@ -23,10 +22,8 @@
 .page-menu {
     margin-top: 7.3rem;
     width: 100%;
-}
 
-@media (min-width: 992px) {
-    .page-menu {
+    @media (min-width: 992px) {
         margin-top: 0;
         width: 27rem;
     }

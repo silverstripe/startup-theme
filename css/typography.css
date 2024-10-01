@@ -27,10 +27,8 @@ h1, .h1 {
     font-size: 3.8rem;
     font-weight: var(--font-weight-extrabold);
     line-height: 1.2;
-}
 
-@media (min-width: 750px) {
-    h1, .h1 {
+    @media (min-width: 750px) {
         font-size: 4.8rem;
         line-height: 1.1;
     }
