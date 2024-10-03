@@ -169,6 +169,7 @@
 
 .mobile-menu-is-active .hamburger__lines {
     background: transparent;
+    width: 2.26rem; /* 2.26 diagonal square == 1.6 horizontal */
 }
 
 .mobile-menu-is-active .hamburger__lines::before {
@@ -286,9 +287,14 @@
 
 .submenu-chevron {
     cursor: pointer;
-    margin-right: -1rem;
+    margin-right: -0.5rem;
     padding: 1rem;
     position: absolute;
     right: 0;
     top: 1rem;
+    transition: var(--transition-default);
+}
+
+.mobile-menu__item.is-active .submenu-chevron {
+    rotate: -180deg;
 }
