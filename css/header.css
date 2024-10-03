@@ -216,6 +216,7 @@
 }
 
 .mobile-menu-is-active .nav--mobile {
+    max-width: 50rem;
     padding-left: 2rem;
     padding-right: 2rem;
     visibility: visible;
