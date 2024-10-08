@@ -73,6 +73,10 @@ h5, .h5 {
     font-size: var(--font-size-large);
 }
 
+.page__intro {
+    font-size: 2.2rem;
+}
+
 blockquote {
     border-left: 1rem solid var(--color-charcoal);
     font-size: 2.2rem;
