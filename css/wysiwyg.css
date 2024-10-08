@@ -8,6 +8,10 @@
     display: grid;
     gap: 2.5rem;
 
+    @media (min-width: 992px) {
+        font-size: var(--font-size-large);
+    }
+
     code {
         background-color: var(--color-pale-grey);
         border-radius: 0.4rem;
