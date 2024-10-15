@@ -15,7 +15,7 @@
     margin: 0;
 
     &:focus-visible {
-        outline: currentcolor dashed 0.2rem;
+        outline: currentcolor dashed 0.1rem;
         outline-offset: 0.2rem;
         border-radius: 0.2rem;
     }

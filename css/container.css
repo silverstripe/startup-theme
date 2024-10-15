@@ -1,5 +1,5 @@
 /* Container styles */
-/* The container class enforces max-width and should wrap all inline display elements */
+/* The container class enforces max-width and should wrap all elements */
 .container {
     max-width: 123rem;
     width: 100%;
@@ -19,8 +19,6 @@
 
 .container--page {
     margin: 4.4rem auto;
-    display: flex;
-    flex-direction: column;
 
     @media (min-width: 750px)  {
         margin: 5.8rem auto;
@@ -33,7 +31,7 @@
 
 .container--narrow {
     @media (min-width: 750px) {
-        max-width: 76.8rem;
+        max-width: 77rem;
     }
 
     @media (min-width: 992px) {

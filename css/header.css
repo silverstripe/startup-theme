@@ -12,7 +12,6 @@
 }
 
 .header__button {
-    border-color: var(--color-white);
     display: none;
     font-size: var(--font-size-small);
     margin-left: auto;
@@ -21,12 +20,7 @@
     @media (min-width: 992px) {
         display: inline-flex;
     }
-
-    &:focus-visible {
-        outline-color: var(--color-white);
-    }
 }
-
 
 /* Logo */
 .logo {
@@ -202,6 +196,7 @@
 /* Mobile menu */
 .nav--mobile {
     background-color: var(--color-white);
+    max-width: 50rem;
     min-height: 100%;
     overflow-x: hidden;
     padding-bottom: 2.7rem;
@@ -216,7 +211,6 @@
 }
 
 .mobile-menu-is-active .nav--mobile {
-    max-width: 50rem;
     padding-left: 2rem;
     padding-right: 2rem;
     visibility: visible;

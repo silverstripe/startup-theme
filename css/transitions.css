@@ -1,6 +1,6 @@
 /* Set transition variables */
 :root {
-    --transition-default: all .3s ease-in;
-    --transition-color: background-color .3s ease-in, border-color .3s ease-in, color .3s ease-in;
-    --transition-svg: fill .3s ease-in;
+    --transition-default: all 0.2s ease-in;
+    --transition-color: background-color 0.2s ease-in, border-color 0.2s ease-in, color 0.2s ease-in;
+    --transition-svg: fill 0.2s ease-in;
 }

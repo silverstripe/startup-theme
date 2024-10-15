@@ -7,8 +7,12 @@
         padding-bottom: 5rem;
         padding-top: 7rem;
     }
+}
 
-    .page__intro {
-        margin-top: 2rem;
-    }
+.hero__inner {
+    max-width: 77rem;
+}
+
+.hero__intro {
+    margin-top: 2rem;
 }
