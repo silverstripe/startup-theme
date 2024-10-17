@@ -39,7 +39,7 @@ purposes of tidier markup.
 ## Styles and JS
 
 All of the CSS in this theme is *Native CSS*. This means there are no cumbersome build tasks or transpiling SASS. Just
-add to and edit the files and you can modify the theme as needed. The file css/startup.css handles the importing of all
+add to and edit the files, and you can modify the theme as needed. The file css/startup.css handles the importing of all
 other files so be sure to add any extra css files you may need here. The top level Page.ss includes this file by way of
 the [Silverstripe Requirements API](https://docs.silverstripe.org/en/5/developer_guides/templates/requirements/).
 
