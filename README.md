@@ -46,3 +46,10 @@ the [Silverstripe Requirements API](https://docs.silverstripe.org/en/5/developer
 The theme Javascript is included in much the same way. js/startup.js imports modularised functionality, and this is then
 included in the top level Page.ss template.
 
+--------
+
+## startup-theme-components
+
+This theme is extended upon by the [startup-theme-components module](https://github.com/silverstripeltd/startup-theme-components).
+The module adds some commonly used modules to the CMS, and extends and expands upon the CSS in this module. It is highly
+recommended to install the module with this theme!
