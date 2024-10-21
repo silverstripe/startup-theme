@@ -82,3 +82,16 @@
         width: 1rem;
     }
 }
+
+/* Skip to main content button */
+.button--skip {
+    font-size: 1.6rem;
+    left: -100%;
+    position: fixed;
+    top: -100%;
+
+    &:focus {
+        left: 1rem;
+        top: 1rem;
+    }
+}

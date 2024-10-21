@@ -1,4 +1,4 @@
-<nav class="breadcrumbs">
+<nav class="breadcrumbs" aria-label="Breadcrumbs">
     <ol class="breadcrumbs__list">
         <li class="breadcrumbs__list-item">
             <a href="$baseURL">Home</a>

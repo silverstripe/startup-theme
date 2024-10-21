@@ -32,16 +32,16 @@
 .page-menu__heading {
     display: block;
     margin-bottom: 1.5rem;
+}
+
+.page-menu__heading-link {
     text-decoration: none;
 }
 
-.page-menu__nav {
+.page-menu__list {
     border-top: 0.1rem solid var(--color-line-grey);
     border-bottom: 0.1rem solid var(--color-line-grey);
     padding: 2.5rem 0;
-}
-
-.page-menu__list {
     display: grid;
     font-size: 1.4rem;
     gap: 1.7rem;
