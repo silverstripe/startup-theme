@@ -41,36 +41,46 @@
 .menu {
     display: flex;
     flex-wrap: wrap;
+    gap: 3.8rem;
+    margin-left: 4.8rem;
 }
 
 .menu__item {
-    margin-left: 2.8rem;
     position: relative;
 }
 
 .menu__link {
+    border-bottom: 0.3rem solid transparent;
     color: var(--color-white);
     display: inline-block;
-    padding: 1rem;
+    padding: 0.7rem 0 0.4rem;
     text-decoration: none;
     transition: var(--transition-color);
 }
 
-.menu__item:hover > .menu__link,
-.menu__item:focus-within > .menu__link,
-.menu__item:has(.submenu:hover) > .menu__link {
-    opacity: 0.7;
+.menu__link--current,
+.menu__link--section {
+    border-color: var(--color-white);
 }
 
-.menu__item--has-submenu > .menu__link {
-    margin-right: -0.5rem; /* to account for chevron padding */
+.menu__item:hover,
+.menu__item:focus-within,
+.menu__item:has(.submenu:hover) {
+    & > .menu__link {
+        color: var(--color-white-70);
+    }
+
+    & > .menu__link--current,
+    & > .menu__link--section {
+        border-color: var(--color-white-70);
+    }
 }
 
 /* add chevron if item has child menu */
 .menu__item--has-submenu > .menu__link::after {
     content: url('../images/chevron--down--white.svg');
     display: inline-block;
-    padding: 0 0.5rem;
+    margin-left: 0.5rem;
     transition: var(--transition-default);
 }
 
@@ -106,6 +116,11 @@
     &:focus {
         color: var(--color-mid-grey);
     }
+}
+
+.submenu__link--current,
+.submenu__link--section {
+    font-weight: var(--font-weight-bold);
 }
 
 /* show submenu */
