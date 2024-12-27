@@ -6,6 +6,7 @@
         <div class="page__content">
             <h1 class="page__title">$Title</h1>
             $Content
+            $ElementalArea
         </div>
         <% if $Menu($PageLevel).count > 1 && $PageLevel > 1 %>
             <aside class="page-menu">
