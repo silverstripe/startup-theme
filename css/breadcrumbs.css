@@ -2,7 +2,15 @@
  * Breadcrumb styles
  */
 .breadcrumbs {
-    margin-bottom: 1.3rem;
+    dd,
+    ol,
+    ul {
+        list-style: none;
+    }
+
+    li {
+        margin-left: 0;
+    }
 }
 
 .breadcrumbs__list {

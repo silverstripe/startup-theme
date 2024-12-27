@@ -1,10 +1,6 @@
-<nav class="breadcrumbs" aria-label="Breadcrumbs">
-    <ol class="breadcrumbs__list">
-        <li class="breadcrumbs__list-item">
-            <a href="$baseURL">Home</a>
-            <span class="breadcrumbs__list-delimiter" aria-hidden="true">/</span>
-        </li>
-        <% if $Pages %>
+<% if $Pages %>
+    <nav class="breadcrumbs" aria-label="Breadcrumbs">
+        <ol class="breadcrumbs__list">
             <% loop $Pages %>
                 <% if not $IsLast %>
                     <li class="breadcrumbs__list-item">
@@ -13,6 +9,6 @@
                     </li>
                 <% end_if %>
             <% end_loop %>
-        <% end_if %>
-    </ol>
-</nav>
+        </ol>
+    </nav>
+<% end_if %>

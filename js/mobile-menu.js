@@ -5,11 +5,11 @@ export default function() {
      * Looks for elements with the data attribute `data-toggle-mobile-menu`
      * and toggles the display of the mobile menu when clicked.
      */
-    const toggles = document.querySelectorAll('[data-toggle-mobile-menu]')
+    const toggles = document.querySelectorAll('[data-toggle-mobile-menu]');
 
     if (toggles.length) {
         toggles.forEach(function(toggle) {
-            toggle.addEventListener('click', toggleMobileMenu)
+            toggle.addEventListener('click', toggleMobileMenu);
         })
     }
 
@@ -18,7 +18,7 @@ export default function() {
          * Adds the class `mobile-menu-active` to the `body` element
          * so that we can style the mobile menu states.
          */
-        const toggleEl = document.querySelector('body')
-        toggleEl.classList.toggle('mobile-menu-is-active')
+        const toggleEl = document.querySelector('body');
+        toggleEl.classList.toggle('mobile-menu-is-active');
     }
 }

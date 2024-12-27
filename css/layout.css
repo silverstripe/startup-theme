@@ -1,4 +1,21 @@
-/* Container styles */
+/* Layout styles that affect the overall layout of all pages */
+
+
+body {
+    /* Ensures the body will be at least viewport height even in short pages. */
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    /*
+      Ensure the main section stretches to fill any empty space.
+      This pushes the footer down to the bottom of the viewport in short pages.
+    */
+    flex-grow: 1;
+}
+
 /* The container class enforces max-width and should wrap all elements */
 .container {
     max-width: 123rem;

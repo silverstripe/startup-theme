@@ -4,6 +4,13 @@
  * Global styles and resets
  * Use with caution as these affect everything on the site
  */
+:root {
+    /* Set transition variables */
+    --transition-default: all 0.2s ease-in;
+    --transition-color: background-color 0.2s ease-in, border-color 0.2s ease-in, color 0.2s ease-in;
+    --transition-svg: fill 0.2s ease-in;
+}
+
 *,
 ::before,
 ::after {
@@ -54,12 +61,6 @@ button {
     text-transform: none;
 }
 
-dd,
-ol,
-ul {
-    list-style: none;
-}
-
 hr {
     height: 0;
     border: unset;
@@ -70,7 +71,6 @@ img {
     display: block;
     height: auto;
     max-width: 100%;
-    width: 100%;
 }
 
 small {
