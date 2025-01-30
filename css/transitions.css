@@ -1,6 +1,0 @@
-/* Set transition variables */
-:root {
-    --transition-default: all 0.2s ease-in;
-    --transition-color: background-color 0.2s ease-in, border-color 0.2s ease-in, color 0.2s ease-in;
-    --transition-svg: fill 0.2s ease-in;
-}

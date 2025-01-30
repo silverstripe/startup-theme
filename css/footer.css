@@ -4,6 +4,16 @@
     color: var(--color-white);
     padding: 4.5rem 0;
     text-align: center;
+
+    dd,
+    ol,
+    ul {
+        list-style: none;
+    }
+
+    li {
+        margin-left: 0;
+    }
 }
 
 /* Logo */
