@@ -14,7 +14,7 @@
     }
   ],
   "require": {
-    "silverstripe/recipe-cms": ">=5.2"
+    "silverstripe/framework": ">=5.2"
   },
   "extra": {
     "expose": [
