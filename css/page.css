@@ -42,10 +42,6 @@
     }
 }
 
-.page-menu__heading-link {
-    text-decoration: none;
-}
-
 .page-menu__list {
     border-bottom: 0.1rem solid var(--color-line-grey);
     padding-bottom: 2.5rem;
@@ -60,6 +56,14 @@
     }
 }
 
+.page-menu__child-list {
+  display: grid;
+  font-size: 1.4rem;
+  gap: 1.7rem;
+  list-style: none;
+  padding-top: 1.7rem;
+}
+
 .page-menu__list-item {
     margin: 0;
 }
@@ -70,4 +74,5 @@
 
 .page-menu__list-item--child {
     font-weight: var(--font-weight-base);
+    margin-left: 1.75em;
 }
