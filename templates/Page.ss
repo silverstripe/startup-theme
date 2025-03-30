@@ -14,7 +14,15 @@
 </head>
 <body <% if $i18nScriptDirection %>dir="$i18nScriptDirection"<% end_if %>>
     <% include Header %>
-    $Layout
+    <main id="main" class="container container--page" tabindex="-1">
+        <% if not $isHomePage %>
+            $Breadcrumbs
+        <% end_if %>
+        <div class="page">
+            $Layout
+        </div>
+    </main>
+
     <% include Footer %>
     <% if $HasPerm('CMS_ACCESS') %>$SilverStripeNavigator<% end_if %>
     <script type="module" src="{$themedResourceURL('js/startup.js')}" defer></script>
