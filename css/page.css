@@ -10,8 +10,6 @@
 }
 
 .page__content {
-    /* display: grid;
-    gap: 2rem; */
     width: 100%;
 }
 
@@ -50,11 +48,24 @@
     display: grid;
     font-size: 1.4rem;
     gap: 1.7rem;
+    list-style: none;
 
     @media (min-width: 992px) {
         padding-top: 2.5rem;
         border-top: 0.1rem solid var(--color-line-grey);
     }
+}
+
+.page-menu__child-list {
+  display: grid;
+  font-size: 1.4rem;
+  gap: 1.7rem;
+  list-style: none;
+  padding-top: 1.7rem;
+}
+
+.page-menu__list-item {
+    margin: 0;
 }
 
 .page-menu__list-item--current {
@@ -63,4 +74,5 @@
 
 .page-menu__list-item--child {
     font-weight: var(--font-weight-base);
+    margin-left: 1.75em;
 }
