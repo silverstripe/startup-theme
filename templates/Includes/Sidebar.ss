@@ -9,7 +9,7 @@
                 <li class="page-menu__list-item page-menu__list-item--current">
                     $Title
                     <% if $Children %>
-                        <ul>
+                        <ul class="page-menu__child-list">
                             <% loop $Children %>
                                 <li class="page-menu__list-item page-menu__list-item--child"><a href="$Link">$Title</a></li>
                             <% end_loop %>
