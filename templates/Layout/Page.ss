@@ -2,6 +2,7 @@
     <h1 class="page__title">$Title</h1>
     $Content
     $ElementalArea
+    $Form
 </div>
 <% if $Menu($PageLevel).count > 1 && $PageLevel > 1 %>
     <% include Sidebar %>
