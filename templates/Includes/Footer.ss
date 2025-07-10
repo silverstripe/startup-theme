@@ -3,7 +3,7 @@
         <nav aria-label="Footer">
             <ul class="footer-menu">
                 <li class="footer-menu__item footer-menu__item--copyright">
-                    &copy; $CurrentDatetime.Format("y") $SiteConfig.Title
+                    &copy; $Now.Format("y") $SiteConfig.Title
                 </li>
                 <% loop $Menu(1) %>
                     <li class="footer-menu__item">
