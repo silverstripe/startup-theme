@@ -10,13 +10,7 @@
 }
 
 .page__content {
-    width: 100%;
-}
-
-.page__content--with-sidebar {
-    @media (min-width: 992px) {
-        width: 76rem;
-    }
+    max-width: 76rem;
 }
 
 .page-menu {
