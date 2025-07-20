@@ -1,7 +1,7 @@
 <aside class="page-menu">
     <nav class="page-menu__nav" aria-labelledby="page-menu-heading">
         <h2 id="page-menu-heading" class="h5 page-menu__heading">
-            <a href="$Parent.Link" class="page-menu__heading-link">$Parent.Title</a>
+            <% if $PageLevel == 1 %>Navigation<% else %>$Parent.Title<% end_if %>
         </h2>
         <ul class="page-menu__list">
         <% loop $Menu($PageLevel) %>
