@@ -18,9 +18,13 @@
 }
 
 [data-accordion-flip] {
+  svg {
     transition: var(--transition-default);
+  }
 }
 
 .accordion__item.is-active [data-accordion-flip] {
+  svg {
     rotate: -180deg;
+  }
 }
