@@ -73,6 +73,10 @@
     transition: var(--transition-color);
 }
 
+.menu__link:hover {
+    color: var(--color-white-70);
+}
+
 .menu__link--current,
 .menu__link--section {
     border-color: var(--color-white);
