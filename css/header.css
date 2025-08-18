@@ -61,7 +61,11 @@
 
 .menu__item-container {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
+}
+
+.menu__chevron {
+    transition: var(--transition-default);
 }
 
 .menu__link {
@@ -97,6 +101,8 @@
 
 /* submenu */
 .submenu {
+    visibility: hidden;
+    opacity: 0;
     background: var(--color-white);
     border: 0.2rem var(--color-charcoal) solid;
     border-radius: 0.4rem;
@@ -104,6 +110,16 @@
     padding: 1rem;
     position: absolute;
     transition: var(--transition-default);
+}
+
+/* .submenu-is-active is applied on mouseover on menu-items with submenus */
+.submenu-is-active .submenu {
+    visibility: visible;
+    opacity: 1;
+}
+
+.submenu-is-active svg {
+    transform: rotate(180deg);
 }
 
 .submenu__link {
