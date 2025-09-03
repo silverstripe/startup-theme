@@ -8,12 +8,21 @@ export default function () {
 
     if (items.length) {
         items.forEach(function (item) {
-          item.addEventListener('mouseover', () => toggleDesktopMenu(item));
-          item.addEventListener('mouseout', () => toggleDesktopMenu(item));
+          item.addEventListener('mouseover', () => toggleSubMenu(item));
+          item.addEventListener('mouseout', () => toggleSubMenu(item));
+
+          // Show submenu on focus
+          let link = item.querySelector('a');
+          link.addEventListener('focus', () => toggleSubMenu(item));
+
+          // When last <a> tag loses focus, hide submenu
+          let links = item.querySelectorAll('a');
+          let finalLink = [...links].pop();
+          finalLink.addEventListener('focusout', () => toggleSubMenu(item));
         });
     }
 
-    function toggleDesktopMenu(item) {
+    function toggleSubMenu(item) {
       item.classList.toggle('submenu-is-active');
     }
 }
