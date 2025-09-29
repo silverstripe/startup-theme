@@ -13,6 +13,7 @@ export default function () {
         const parentLink = item.querySelector('a');
         const chevronBtn = item.querySelector('.submenu-chevron');
         let closeTimer = null;
+        let isKeyboardFocusActive = false;
 
         // Helper: open submenu (applies class to parent)
         function openSubMenu() {
@@ -33,11 +34,13 @@ export default function () {
                 if (submenu) submenu.setAttribute('aria-hidden', 'true');
                 if (chevronBtn) chevronBtn.setAttribute('aria-expanded', 'false');
             }
+            isKeyboardFocusActive = false;
         }
         // Helper: trap focus within submenu
         function trapFocus(e) {
             if (!item.classList.contains('submenu-is-active')) return;
             if (links.length === 0) return;
+            isKeyboardFocusActive = true;
             const first = links[0];
             const last = links[links.length - 1];
             if (e.key === 'Tab') {
@@ -53,11 +56,12 @@ export default function () {
                 parentLink.focus();
             }
         }
-        // Mouse events: robust tracking
+        // Mouse events: ignore if keyboard focus is active
         function handleMouseEnter() {
             openSubMenu();
         }
         function handleMouseLeave() {
+            if (isKeyboardFocusActive) return;
             closeTimer = setTimeout(() => {
                 // Only close if mouse is not inside parent, submenu container, or submenu
                 const isHovering = item.matches(':hover') ||
@@ -108,22 +112,31 @@ export default function () {
         // Submenu links: trap focus, close on Escape
         links.forEach(link => {
             link.addEventListener('keydown', trapFocus);
+            link.addEventListener('focus', () => {
+                isKeyboardFocusActive = true;
+            });
             link.addEventListener('blur', () => {
                 setTimeout(() => {
+                    // If no submenu link is focused, disable keyboard focus flag
+                    if (![...links].some(l => l === document.activeElement)) {
+                        isKeyboardFocusActive = false;
+                    }
                     if (!item.contains(document.activeElement)) {
                         closeSubMenu();
                     }
                 }, 10);
             });
         });
-        // Ensure Escape always closes submenu, even if focus is on submenu container or submenu itself
-        if (submenu) {
-            submenu.addEventListener('keydown', function(e) {
-                if (e.key === 'Escape') {
-                    closeSubMenu();
-                    parentLink.focus();
-                    e.stopPropagation();
-                }
+    });
+
+    document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape') {
+            document.querySelectorAll('.menu__item--has-submenu.submenu-is-active').forEach(item => {
+                item.classList.remove('submenu-is-active');
+                const submenu = item.querySelector('.submenu');
+                const chevronBtn = item.querySelector('.submenu-chevron');
+                if (submenu) submenu.setAttribute('aria-hidden', 'true');
+                if (chevronBtn) chevronBtn.setAttribute('aria-expanded', 'false');
             });
         }
     });
