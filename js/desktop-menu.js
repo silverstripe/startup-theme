@@ -21,6 +21,7 @@ export default function () {
                 item.classList.add('submenu-is-active');
                 if (submenu) submenu.setAttribute('aria-hidden', 'false');
                 if (chevronBtn) chevronBtn.setAttribute('aria-expanded', 'true');
+                if (parentLink) parentLink.setAttribute('aria-expanded', 'true');
             }
             if (closeTimer) {
                 clearTimeout(closeTimer);
@@ -33,6 +34,7 @@ export default function () {
                 item.classList.remove('submenu-is-active');
                 if (submenu) submenu.setAttribute('aria-hidden', 'true');
                 if (chevronBtn) chevronBtn.setAttribute('aria-expanded', 'false');
+                if (parentLink) parentLink.setAttribute('aria-expanded', 'false');
             }
             isKeyboardFocusActive = false;
         }
@@ -79,8 +81,7 @@ export default function () {
             submenuContainer.addEventListener('mouseenter', handleMouseEnter);
             submenuContainer.addEventListener('mouseleave', handleMouseLeave);
         }
-        // Keyboard: open on focus, close on blur
-        parentLink.addEventListener('focus', openSubMenu);
+        // Keyboard: close on blur only (do not open on link focus)
         parentLink.addEventListener('blur', () => {
             setTimeout(() => {
                 if (!item.contains(document.activeElement)) {
@@ -89,7 +90,6 @@ export default function () {
             }, 10);
         });
         if (chevronBtn) {
-            chevronBtn.addEventListener('focus', openSubMenu);
             chevronBtn.addEventListener('blur', () => {
                 setTimeout(() => {
                     if (!item.contains(document.activeElement)) {
@@ -108,6 +108,7 @@ export default function () {
                     parentLink.focus();
                 }
             });
+            chevronBtn.addEventListener('click', openSubMenu);
         }
         // Submenu links: trap focus, close on Escape
         links.forEach(link => {
