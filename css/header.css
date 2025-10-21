@@ -118,7 +118,7 @@
 
 .submenu-chevron {
   color: var(--color-white);
-  padding: 0 1rem;
+  padding: 0 0.5rem;
 
   &:hover {
     color: var(--color-line-grey);
