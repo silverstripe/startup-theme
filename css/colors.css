@@ -1,17 +1,20 @@
-/* Color variables */
+/**
+ * Color variables
+ */
 :root {
     --color-black: #000000;
     --color-black-0: #00000000;
     --color-black-50: #00000050;
-    --color-bright-blue: #005AE1;
+    --color-bright-blue: #005ae1;
     --color-charcoal: #222222;
     --color-mid-grey: #757575;
-    --color-grey: #5F5F5F;
-    --color-line-grey: #DADADA;
-    --color-pale-grey: #F4F4F4;
-    --color-white: #FFFFFF;
+    --color-grey: #5f5f5f;
+    --color-line-grey: #dadada;
+    --color-pale-grey: #f4f4f4;
+    --color-table-grey: #d4d4d4;
+    --color-white: #ffffff;
     --color-white-70: #bdbdbd;
-    --color-error-dark: #CF0000;
+    --color-error-dark: #cf0000;
     --color-error-light: #f9d0d0;
     --color-good-dark: #8fbe00;
     --color-good-light: #ecf9d0;

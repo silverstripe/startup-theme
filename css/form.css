@@ -1,108 +1,102 @@
-/** ----------------------------------------------------------
+/**
+ * Form styles
  *
- * This stylesheet includes both generic form styles and
- *    additional form styles for the User Defined Form Module.
- *
- ** ------------------------------------------------------- */
+ * Includes both generic form styles and additional form styles for the User Defined Form module
+ */
 
-form {
-    --max-width: 100%;
-    /* important required to override userform module styling */
-    max-width: var(--max-width) !important;
+form,
+form.userform {
+    --form-max-width: 100%;
+
+    max-width: var(--form-max-width);
 
     @media (min-width: 750px) {
-        --max-width: 500px;
-    }
-
-    div.field {
-        margin: 0.667em 0 1em;
+      --form-max-width: 50rem;
     }
 
     fieldset {
         border: 0;
     }
 
-    label.left {
-        font-weight: bold;
+    .field {
+        margin: 2.5rem 0;
     }
 
-    label.right {
-        font-size: 0.9em;
+    label.left,
+    legend.left,
+    .form-label {
+        display: inline-block;
+        font-weight: var(--font-weight-semibold);
+        margin-bottom: 0.6rem;
+    }
+
+    input + label.form-label {
+        font-weight: var(--font-weight-base);
+        margin-bottom: 0;
+        margin-left: 0.6rem;
+    }
+
+    label.right,
+    .right-title {
+        font-size: var(--font-size-small);
+        margin-top: 0.4rem;
     }
 
     input.text,
     textarea,
     select {
-        width: 100%;
-        max-width: var(--max-width);
-        padding: 0.4em 0.333em;
-        font-size: 1.5rem;
         background-color: var(--color-white);
-        border: 1px solid var(--color-line-grey);
-    }
-
-    input[disabled],
-    textarea[disabled],
-    select[disabled] {
-        background-color: var(--color-pale-grey);
-        border: 1px solid var(--color-line-grey);
+        border: 0.1rem solid var(--color-line-grey);
+        border-radius: 0.4rem;
+        padding: 1rem 1.6rem;
+        max-width: var(--form-max-width);
+        width: 100%;
     }
 
     textarea {
         resize: vertical;
     }
 
-    /* pseudo element adds an asterisk to a required fields label */
+    /* Disabled fields */
+    input[disabled],
+    textarea[disabled],
+    select[disabled] {
+        border: 0.1rem solid var(--color-line-grey);
+        background-color: var(--color-pale-grey);
+    }
+
+    /* Invalid fields */
+    input.error,
+    textarea.error,
+    select.error {
+        border-color: var(--color-error-dark);
+    }
+
+    /* Pseudo element adds an asterisk to a required fields label */
     input[required] ~ label.left:after,
     input[required] ~ legend.left:after,
-    /* user defined form uses .requiredField css class */
+    /* User Defined Form module uses .requiredField class */
     .requiredField label.left:after,
     .requiredField legend.left:after {
         color: var(--color-error-dark);
         content: "*";
-        font-size: 0.8em;
-        font-weight: normal;
-        padding-left: 0.333em;
-    }
-
-    /* Radio and Checkbox */
-    .checkbox label.right,
-    .radio label.right {
-        float: left;
-    }
-
-    /* Buttons */
-    a.btn,
-    button,
-    input[type="submit"],
-    input[type="reset"],
-    .Actions .action {
-        display: inline-block;
-        border-radius: 4px;
-        padding: 0.333em 0.833em;
-        margin-top: 0.556em;
-        margin-bottom: 0.556em;
-        border: none;
-
-        &:not([disabled]) {
-            cursor: pointer;
-        }
+        font-weight: var(--font-weight-base);
+        padding-left: 0.4rem;
     }
 
     /* Messages */
     .message {
-        margin: 0.556em 0;
         display: block;
-        max-width: var(--max-width);
-        clear: left;
+        margin: 0.6rem 0 0;
+        max-width: var(--form-max-width);
     }
 
     .message,
     .error-container {
-        padding: 0.278em 0.556em;
         background-color: var(--color-warning-light);
-        border: 1px solid var(--color-warning-dark);
-        border-radius: 3px;
+        border: 0.1rem solid var(--color-warning-dark);
+        border-radius: 0.4rem;
+        padding: 1rem 1.6rem;
 
         &.good {
             background-color: var(--color-good-light);
@@ -110,25 +104,17 @@ form {
         }
 
         &.bad,
-        &.required,
         &.error,
-        &.error-container {
+        &.error-container,
+        &.required {
             background-color: var(--color-error-light);
             border-color: var(--color-error-dark);
         }
     }
 
-    /* invalid fields */
-    input:invalid,
-    textarea:invalid {
-        border-radius: 1px;
-        box-shadow: 0px 0px 0.5px 1px var(--color-error);
-    }
-
-    /* user forms heading field */
+    /* User Defined Forms module heading field */
     .FormHeading {
-        clear: both;
-        padding-top: 0.68em;
+        margin: 2rem 0;
     }
 }
 
