@@ -1,5 +1,9 @@
-/* Button styles */
-.button {
+/**
+ * Button styles
+ */
+.button,
+input[type="reset"],
+input[type="submit"] {
     --button-background-color: var(--color-charcoal);
     --button-border-color: var(--color-charcoal);
     --button-outline-color: var(--color-charcoal);
@@ -19,6 +23,10 @@
     text-decoration: none;
     transition: var(--transition-color);
     width: fit-content;
+
+    &:not([disabled]) {
+        cursor: pointer;
+    }
 
     &:hover {
         --button-background-color: var(--color-bright-blue);
