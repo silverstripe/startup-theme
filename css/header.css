@@ -1,4 +1,6 @@
-/* Header */
+/**
+ * Header styles
+ */
 .header {
     background-color: var(--color-charcoal);
     color: var(--color-white);
@@ -8,16 +10,6 @@
 
     @media (min-width: 992px) {
         min-height: 9rem;
-    }
-
-    dd,
-    ol,
-    ul {
-        list-style: none;
-    }
-
-    li {
-        margin-left: 0;
     }
 }
 

@@ -2,25 +2,24 @@
  * Accordion styles
  * See also accordion.js
  */
-
 .accordion__container {
     display: grid;
     grid-template-rows: 0fr;
+    opacity: 0;
     transition: var(--transition-default);
     visibility: hidden;
-    opacity: 0;
 }
 
 .accordion__item.is-active .accordion__container {
     grid-template-rows: 1fr;
+    opacity: 1;
     visibility: visible;
-    opacity: 100;
 }
 
 [data-accordion-flip] {
-  transition: var(--transition-default);
+    transition: var(--transition-default);
 }
 
 .accordion__item.is-active [data-accordion-flip] {
-  rotate: -180deg;
+    rotate: -180deg;
 }
